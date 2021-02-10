@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Livros</string>
+    <string name="Link">
+        Feito com ❤ por <a href="https://github.com/ErnaneJ/Gerenciador-de-Livros">Ernane Ferreira</a>
+    </string>
+
 </resources>

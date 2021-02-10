@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.gerenciadordelivros.R;
@@ -35,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements LivroAdapter.OnLi
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-
         /*listaLivros.add(new Livro(1L,"Android para Leigos","Michael Burton","Alta books",0));
         listaLivros.add(new Livro(2L,"Android para Programadores","Paul J, Deitel","Bookman",1));
         listaLivros.add(new Livro(3L,"Desenvolvimento para Android","Griffiths, David","Alta books",0));
@@ -51,6 +52,10 @@ public class MainActivity extends AppCompatActivity implements LivroAdapter.OnLi
         livroAdapter = new LivroAdapter(listaLivros,this, this);
 
         recyclerView.setAdapter(livroAdapter);
+
+
+        TextView text = (TextView) findViewById(R.id.link1);
+        text.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     @Override
